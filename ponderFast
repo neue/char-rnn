@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+th sample.lua cv/tomita-fast.t7 -gpuid -1 -length 5000 -seed $((1 + RANDOM % 10000))

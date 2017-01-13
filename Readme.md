@@ -1,6 +1,9 @@
 
 # Tomita Recurrent Neural Network
 
+![Screenshot](artworks/FirstArtwork.png)
+
+
 A [char-rnn](http://karpathy.github.io/2015/05/21/rnn-effectiveness/) based neural network trained on 10,000 code based artworks created using Kano [Make Art](http://art.kano.me).
 
 ## Requirements
@@ -66,3 +69,5 @@ $ th sample.lua cv/tomita-deep.t7 -gpuid -1 -length 500 -temperature 1 -primetex
 - `textGen` - Tries to generate color names
 
 ## Examples
+
+![Example Output](artworks/artworks.png)

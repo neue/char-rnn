@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+while true
+  cmd = "th sample.lua cv/tomita-fast.t7 -gpuid -1 -primetext \"text \'\" -length 80 -seed #{rand(60000)}"
+  output = `#{cmd}`
+  puts output.lines.first  
+end

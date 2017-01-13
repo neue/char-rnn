@@ -93,7 +93,7 @@ local ivocab = {}
 for c,i in pairs(vocab) do ivocab[i] = c end
 
 -- initialize the rnn state to all zeros
-gprint('creating an ' .. checkpoint.opt.model .. '...')
+-- gprint('creating an ' .. checkpoint.opt.model .. '...')
 local current_state
 current_state = {}
 for L = 1,checkpoint.opt.num_layers do
@@ -111,8 +111,8 @@ state_size = #current_state
 -- do a few seeded timesteps
 local seed_text = opt.primetext
 if string.len(seed_text) > 0 then
-    gprint('seeding with ' .. seed_text)
-    gprint('--------------------------')
+    -- gprint('seeding with ' .. seed_text)
+    -- gprint('--------------------------')
     for c in seed_text:gmatch'.' do
         prev_char = torch.Tensor{vocab[c]}
         io.write(ivocab[prev_char[1]])
@@ -126,8 +126,8 @@ if string.len(seed_text) > 0 then
     end
 else
     -- fill with uniform probabilities over characters (? hmm)
-    gprint('missing seed text, using uniform probability over first character')
-    gprint('--------------------------')
+    -- gprint('missing seed text, using uniform probability over first character')
+    -- gprint('--------------------------')
     prediction = torch.Tensor(1, #ivocab):fill(1)/(#ivocab)
     if opt.gpuid >= 0 and opt.opencl == 0 then prediction = prediction:cuda() end
     if opt.gpuid >= 0 and opt.opencl == 1 then prediction = prediction:cl() end

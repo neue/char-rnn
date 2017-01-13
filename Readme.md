@@ -1,6 +1,8 @@
 
 # Tomita Recurrent Neural Network
 
+######Tomita Tsunejirō, the first in the history of judo to be awarded the rank of Shodan by the founder of judo, Kanō Jigorō
+
 ![Screenshot](artworks/FirstArtwork.png)
 
 

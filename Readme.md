@@ -13,11 +13,9 @@ A [char-rnn](http://karpathy.github.io/2015/05/21/rnn-effectiveness/) based neur
 This code is written in Lua and requires [Torch](http://torch.ch/). If you're on Ubuntu, installing Torch in your home directory may look something like: 
 
 ```bash
-$ curl -s https://raw.githubusercontent.com/torch/ezinstall/master/install-deps | bash
 $ git clone https://github.com/torch/distro.git ~/torch --recursive
-$ cd ~/torch; 
-$ ./install.sh      # and enter "yes" at the end to modify your bashrc
-$ source ~/.bashrc
+$ cd ~/torch; bash install-deps;
+$ ./install.sh
 ```
 
 See the Torch installation documentation for more details. After Torch is installed we need to get a few more packages using [LuaRocks](https://luarocks.org/) (which already came with the Torch install). In particular:

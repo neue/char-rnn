@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+cd ./cv
+wget https://s3-us-west-1.amazonaws.com/kano-tomita-resources/tomita-deepascii.t7
+cd ..
